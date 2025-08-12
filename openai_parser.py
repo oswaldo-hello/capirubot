@@ -24,7 +24,6 @@ CATEGORY_DEFINITIONS = [
 ]
 
 lima_tz = pytz.timezone("America/Lima")
-fecha_actual = datetime.now(lima_tz).strftime("%Y-%m-%d")
 
 def parse_relative_date(user_text):
     now = datetime.now(lima_tz).date()
@@ -61,6 +60,9 @@ def parse_relative_date(user_text):
     return now.isoformat()
 
 def parse_with_openai(user_text):
+
+    fecha_actual = datetime.now(lima_tz).strftime("%Y-%m-%d")
+    
     category_text = "\n".join([f"- {c} | {sub} → {desc}" for c, sub, desc in CATEGORY_DEFINITIONS])
 
     system_prompt = f"""
