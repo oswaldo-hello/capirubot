@@ -12,7 +12,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 CATEGORY_DEFINITIONS = [
     ("INGRESO", "Ingresos", "Todo tipo de ingresos"),
     ("INVERSIONES", "Inversiones", "Dinero invertido"),
-    ("GASTO", "BASICO", "Gastos básicos no incluidos en otras categorías"),
+    ("GASTO", "BASICO", "Gastos básicos no incluidos en otras categorías. Incluye pagos de servicios, ropa, zapatos, zapatillas, etc."),
     ("GASTO", "COMIDA", "Comida y restaurantes"),
     ("GASTO", "COSAS", "Compras personales"),
     ("GASTO", "ENTRETENIMIENTO", "Streaming, cine, etc."),
