@@ -9,6 +9,13 @@ import pytz
 from excel_utils import append_transaction, read_transactions
 from openai_parser import parse_with_openai
 
+
+# Configuración Json
+json_content = os.environ.get("GOOGLE_SHEET_CREDENTIALS_JSON")
+if json_content:
+    with open("credentials.json", "w") as f:
+        f.write(json_content)
+
 # Configuración
 load_dotenv()
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")

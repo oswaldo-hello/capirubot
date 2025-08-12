@@ -8,7 +8,8 @@ import pytz
 lima_tz = pytz.timezone("America/Lima")
 
 # Ruta al archivo JSON de credenciales (ajusta con tu nombre real del archivo)
-GOOGLE_CREDENTIALS_FILE = "capirubot-af8f308ba262.json"
+#GOOGLE_CREDENTIALS_FILE = "capirubot-af8f308ba262.json"
+GOOGLE_CREDENTIALS_FILE = "credentials.json"
 
 # ID del Google Sheet (lo obtienes de la URL del documento)
 # Ejemplo de URL:
