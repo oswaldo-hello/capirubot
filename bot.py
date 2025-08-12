@@ -6,15 +6,16 @@ from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTyp
 from datetime import datetime
 import pytz
 
-from excel_utils import append_transaction, read_transactions
-from openai_parser import parse_with_openai
-
-
 # Configuración Json
 json_content = os.environ.get("GOOGLE_SHEET_CREDENTIALS_JSON")
 if json_content:
     with open("credentials.json", "w") as f:
         f.write(json_content)
+
+from excel_utils import append_transaction, read_transactions
+from openai_parser import parse_with_openai
+
+
 
 # Configuración
 load_dotenv()
