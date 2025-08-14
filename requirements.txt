@@ -1,6 +1,6 @@
 python-telegram-bot==20.3
 python-dotenv
-openai
+openai>=1.0.0
 pytz
 gspread
 google-auth
